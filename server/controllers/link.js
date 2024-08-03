@@ -11,23 +11,23 @@ const postLink = async (req, res) => {
   res.json({
     message: "Link saved",
     data: savedLink,
-    message : 'Link created successfully'
+    message: "Link created successfully",
   });
 };
 
-const getSlugredirect = async (req , res)=>{
- const {slug} = req.params;
- const link = await Link.findOne({slug});
- if (!link) {
-  res.json({
-    success : false,
-    message : 'Link not found'
-  })
- }
- link.view = link.view + 1;
- await link.save();
- res.redirect(link.target);
-}
+const getSlugredirect = async (req, res) => {
+  const { slug } = req.params;
+  const link = await Link.findOne({ slug });
+  if (!link) {
+    res.json({
+      success: false,
+      message: "Link not found",
+    });
+  }
+  link.view = link.view + 1;
+  await link.save();
 
+  res.redirect(link.target);
+};
 
-export { postLink , getSlugredirect};
+export { postLink, getSlugredirect };
