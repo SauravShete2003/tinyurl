@@ -1,0 +1,34 @@
+.link-form {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.link-input {
+  font-size: 17px;
+  width: 80%;
+  height: 20px;
+  padding: 10px;
+  display: block;
+  margin: 15px auto;
+}
+.link-input:active,
+.link-input:focus {
+  outline: none;
+}
+.link-btn {
+  font-weight: 800;
+  width: 87%;
+  height: 30px;
+  display: block;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.link-heading {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}

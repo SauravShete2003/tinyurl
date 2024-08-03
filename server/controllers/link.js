@@ -9,7 +9,7 @@ const postLink = async (req, res) => {
   });
   const savedLink = await link.save();
   res.json({
-    message: "Link saved",
+    success : true,
     data: savedLink,
     message: "Link created successfully",
   });
