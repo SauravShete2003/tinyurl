@@ -15,12 +15,22 @@ function Signup() {
         email:signup.email,
         password:signup.password
     });
-    setSignup(response.data.data)
-    toast.success('User Signup successfully')
+   if (response.data.data){
+    toast.success("Signup Successfull")
+    setSignup ({
+      name: "",
+      email: "",
+      password: "",
+    })
+   }
+   else{
+    toast.error(response.data.message)
+    }
+    
   }
   return (
     <div className="signup-container">
-      <h1>Signup</h1>
+      <h1 className="auth-heading">Signup</h1>
       <form className="signup-from">
         <input
           type="text"
