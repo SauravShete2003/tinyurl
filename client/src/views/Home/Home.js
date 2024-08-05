@@ -30,6 +30,7 @@ function Home() {
         Streamline Your URLs with Our Easy-to-Use Link Shortening Service
       </p>
       <form className="link-form">
+        <h2 className="from-link-heading">Generate Shorten URL</h2>
         <input
           className="link-input"
           type="text"
@@ -58,7 +59,7 @@ function Home() {
           }}
         />
         <button type="button" className="link-btn" onClick={shortenURL}>
-          Submit
+          Generate
         </button>
       </form>
       <Toaster />

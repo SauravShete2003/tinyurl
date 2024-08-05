@@ -3,10 +3,12 @@
   margin: 0 auto;
   width: 400px;
   padding: 20px;
-  border: 2px solid black;
+  box-shadow: 0 0 5px 3px gray;
 }
 
 .link-input {
+  border: 2px solid #f8b17e;
+  border-radius: 4px;
   font-size: 17px;
   width: 80%;
   height: 20px;
@@ -19,6 +21,9 @@
   outline: none;
 }
 .link-btn {
+  border-radius: 5px;
+  border: none;
+  background-color: #ff8e3c;
   font-weight: 800;
   width: 87%;
   height: 30px;
@@ -26,9 +31,19 @@
   margin: 5px auto;
   cursor: pointer;
 }
+.link-btn:hover{
+  background-color: #ff9f4d;
+}
 
 .link-heading {
+color: #f38b30;
   text-align: center;
   font-size: 25px;
   font-weight: 700;
+}
+
+.from-link-heading{
+  text-align: center;
+  color: #f38b30;
+  margin: 0 ;
 }
