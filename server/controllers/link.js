@@ -9,7 +9,7 @@ const postLink = async (req, res) => {
   });
   const savedLink = await link.save();
   res.json({
-    success : true,
+    success: true,
     data: savedLink,
     message: "Link created successfully",
   });
@@ -18,6 +18,7 @@ const postLink = async (req, res) => {
 const getSlugredirect = async (req, res) => {
   const { slug } = req.params;
   const link = await Link.findOne({ slug });
+  console.log(link);
   if (!link) {
     res.json({
       success: false,
@@ -30,4 +31,12 @@ const getSlugredirect = async (req, res) => {
   res.redirect(link.target);
 };
 
-export { postLink, getSlugredirect };
+const getLinks = async (req, res) => {
+  const links = await Link.find();
+  res.json({
+    message: "All links featched successfully",
+    success: true,
+    data: links
+  });
+};
+export { postLink, getSlugredirect, getLinks };

@@ -1,7 +1,16 @@
+.tiny-url-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .link-form {
+  background-color: #fffffe;
+  text-align: center;
   display: block;
   margin: 0 auto;
   width: 400px;
+  height: 300px;
   padding: 20px;
   box-shadow: 0 0 5px 3px gray;
 }
@@ -21,6 +30,7 @@
   outline: none;
 }
 .link-btn {
+  background-color: #0d0d0d;
   border-radius: 5px;
   border: none;
   background-color: #ff8e3c;
@@ -31,19 +41,31 @@
   margin: 5px auto;
   cursor: pointer;
 }
-.link-btn:hover{
+.link-btn:hover {
   background-color: #ff9f4d;
 }
 
 .link-heading {
-color: #f38b30;
+  color: #f38b30;
   text-align: center;
   font-size: 25px;
   font-weight: 700;
 }
 
-.from-link-heading{
-  text-align: center;
+.from-link-heading {
   color: #f38b30;
-  margin: 0 ;
+}
+
+.link-container {
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  width: 600px;
+  box-shadow: 0 0 5px 2px gray;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+/* media screen */
+@media (max-width: 400px) {
 }

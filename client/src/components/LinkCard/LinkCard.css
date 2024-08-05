@@ -1,0 +1,19 @@
+.link-card-container{
+    width: 500px;
+    box-shadow: 0 0 4px 3px rgb(195, 193, 193);
+    background-color: #fdfdff;
+    padding: 7px;
+    margin: 20px 5px;
+    border-radius: 4px;
+}
+.link-card-heading{
+    margin: 2px;
+}
+
+.link-card-target{
+    text-decoration: none;
+}
+
+.url-name{
+    font-weight: bold;
+}

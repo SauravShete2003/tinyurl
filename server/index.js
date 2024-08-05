@@ -4,8 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
 
-import { postLink, getSlugredirect } from "./controllers/link.js";
-import { postLogin, postSignup } from "./controllers/user.js";
+import { postLink, getSlugredirect, getLinks } from "./controllers/link.js";
+import { postLogin, postSignup} from "./controllers/user.js";
 
 const app = express();
 app.use(express.json());
@@ -29,6 +29,7 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/Link", postLink);
+app.get('/links' , getLinks);
 app.get("/:slug", getSlugredirect);
 app.post("/login", postLogin);
 app.post("/signup", postSignup);
