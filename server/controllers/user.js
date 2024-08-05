@@ -57,5 +57,21 @@ const postLogin = async (req, res) => {
     });
   }
 };
+const getByEmail = async (req, res) => {
+  const { email } = req.body;
+  const userEmail = await User.findById(email);
+  if (!userEmail) {
+    res.json({
+      message: "User not found",
+      data: null,
+      success: false,
+    });
+  }
+  res.json({
+    success: true,
+    data: userEmail,
+    message: "User featch succesfully",
+  });
+};
 
-export {postLogin , postSignup}
+export { postLogin, postSignup , getByEmail};
