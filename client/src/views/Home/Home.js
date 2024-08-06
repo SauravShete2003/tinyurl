@@ -1,29 +1,65 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 function Home() {
+  const [user, setUser] = useState("");
+  const [loadLink , setLoadLink] = useState([])
   const [linkData, setLinkData] = useState({
     title: "",
     target: "",
     slug: "",
   });
+  useEffect(() => {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      setUser(currentUser);
+      loadLinks(currentUser._id);
+    } else {
+      window.location.href = "/login";
+    }
+  }, []);
+
+  const loadLinks = async (userId) => {
+    try {
+      toast.loading("Links loading...");
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/links?userId=${userId}`
+      );
+      toast.dismiss();
+      if (response.data.success) {
+        setLoadLink(response.data.data);
+      } else {
+        toast.error("Failed to load links");
+      }
+    } catch (error) {
+      toast.dismiss();
+      toast.error("Error fetching links");
+      console.error("Error fetching links:", error);
+    }
+  };
 
   const shortenURL = async () => {
-    const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}/Link`,
-      linkData
-    );
-    if (response.data.success) {
-      toast.success("Link shortened successfully");
-      setLinkData({
-        title: "",
-        target: "",
-        slug: "",
-      });
-    } else {
-      toast.error(response.data.message);
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/Link`,
+        linkData
+      );
+      if (response.data.success) {
+        toast.success("Link shortened successfully");
+        setLinkData({
+          title: "",
+          target: "",
+          slug: "",
+        });
+        loadLinks(user._id);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Error shortening link");
+      console.error("Error shortening link:", error);
     }
   };
 

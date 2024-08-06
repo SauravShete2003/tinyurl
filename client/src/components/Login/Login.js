@@ -25,7 +25,7 @@ function Login() {
       toast.success(response.data.message);
       localStorage.setItem("currentUser", JSON.stringify(response.data.data));
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "/alllinks";
       }, 2000);
     } else {
       toast.error(response.data.message);

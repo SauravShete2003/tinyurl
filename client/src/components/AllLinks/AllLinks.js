@@ -1,4 +1,4 @@
-import "./AllLinks.css";
+
 import LinkCard from "../LinkCard/LinkCard";
 import { useEffect, useState } from "react";
 import axios from "axios";

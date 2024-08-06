@@ -1,19 +1,65 @@
-.link-card-container{
-    width: 500px;
-    box-shadow: 0 0 4px 3px rgb(195, 193, 193);
-    background-color: #fdfdff;
-    padding: 7px;
-    margin: 20px 5px;
-    border-radius: 4px;
+.link-container {
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 0 5px 2px gray;
+  max-height: 500px;
+  overflow-y: scroll;
 }
-.link-card-heading{
-    margin: 2px;
+
+.link-card-container {
+  position: relative;
+  box-shadow: 0 0 4px 3px rgb(195, 193, 193);
+  padding: 15px;
+  margin: 20px 5px;
+  border-radius: 4px;
+}
+.link-card-heading {
+  margin: 3px;
+  margin-bottom: 10px;
+
 }
 
 .link-card-target{
-    text-decoration: none;
+    margin-left: 30px;
+  text-decoration: none;
 }
 
-.url-name{
-    font-weight: bold;
+.url-name {
+  font-weight: bold;
+}
+
+.link-card-view {
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  font-size: 18px;
+}
+
+.view-icon {
+  width: 20px;
+  position: absolute;
+  top: 40%;
+  right: 10px;
+}
+
+.link-icon{
+    width: 20px;
+    position: absolute;
+    left: 10px;
+}
+
+.create-link-time{
+    font-size: 12px;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+}
+
+.copy-icon{
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
