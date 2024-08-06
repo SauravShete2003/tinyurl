@@ -1,4 +1,4 @@
-.signup-container{
+.auth-container{
     text-align: center;
     box-shadow: 0 0 5px 2px gray;
     border-radius: 5px;
@@ -9,38 +9,4 @@
     margin:  40px auto;
     padding: 10px;
    
-}
-.input-box{
-    border-radius: 5px;
-    border: 2px solid black;
-    font-size: 17px;
-    width: 80%;
-    padding:7px 10px;
-    margin: 10px;
-}
-
-.input-box:focus , .input-box:active{
-    outline: none;
-}
-
-.auth-btn{
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 17px;
-    background-color: #ff8e3c;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-.auth-heading{
-    color: #ff8e3c;
-}
-
-.auth-link{
-    margin-top: 10px;
-    display: block;
-    color: blue;
-    text-decoration: none;
-
 }

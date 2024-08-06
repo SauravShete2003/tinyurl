@@ -21,7 +21,11 @@ function Signup() {
       name: "",
       email: "",
       password: "",
+      
     })
+    setTimeout(() => {
+      window.location.href = "/login";
+    }, 2000);
    }
    else{
     toast.error(response.data.message)
@@ -29,9 +33,9 @@ function Signup() {
     
   }
   return (
-    <div className="signup-container">
+    <div className="auth-container">
       <h1 className="auth-heading">Signup</h1>
-      <form className="signup-from">
+      <form className="auth-from">
         <input
           type="text"
           placeholder="username"

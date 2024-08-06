@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import LinkCard from "../../components/LinkCard/LinkCard";
+import React, { useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -10,22 +9,6 @@ function Home() {
     target: "",
     slug: "",
   });
-  const [links, setLinks] = useState([]);
-
-  const allLinks = async () => {
-    try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/links`
-      );
-      setLinks(response.data.data);
-    } catch (error) {
-      toast.error("Failed to fetch links");
-    }
-  };
-
-  useEffect(() => {
-    allLinks();
-  }, []);
 
   const shortenURL = async () => {
     const response = await axios.post(
@@ -39,7 +22,6 @@ function Home() {
         target: "",
         slug: "",
       });
-      allLinks();
     } else {
       toast.error(response.data.message);
     }
@@ -84,22 +66,6 @@ function Home() {
             Generate
           </button>
         </form>
-        <div className="link-container">
-          <h1 className="link-heading">My Links</h1>
-          {links.map((link, i) => {
-            const { title, target, slug, view, createdAt } = link;
-            return (
-              <LinkCard
-                key={i}
-                title={title}
-                target={target}
-                slug={slug}
-                view={view}
-                createdAt={createdAt}
-              />
-            );
-          })}
-        </div>
       </div>
       <Toaster />
     </div>

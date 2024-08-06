@@ -20,7 +20,7 @@ const getSlugredirect = async (req, res) => {
   const link = await Link.findOne({ slug });
   console.log(link);
   if (!link) {
-    res.json({
+    res.status(404).json({
       success: false,
       message: "Link not found",
     });
