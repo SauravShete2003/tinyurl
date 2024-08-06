@@ -1,11 +1,12 @@
 import Link from "../models/Link.js";
-
+import User from '../models/User.js'
 const postLink = async (req, res) => {
-  const { target, title, slug } = req.body;
+  const { target, title, slug , user} = req.body;
   const link = new Link({
     target,
     title,
     slug,
+    user
   });
   const savedLink = await link.save();
   res.json({
@@ -32,11 +33,21 @@ const getSlugredirect = async (req, res) => {
 };
 
 const getLinks = async (req, res) => {
-  const links = await Link.find();
-  res.json({
-    message: "All links featched successfully",
-    success: true,
-    data: links
-  });
+  try {
+    const { userId } = req.query;
+    const user = await User.findById(userId);
+    const links = await Link.find({ user : userId }).sort({ createdAt: -1 });
+
+    res.json({
+      message: "All links featched successfully",
+      success: true,
+      data: links,
+    });
+  } catch(e) {
+    res.json({
+      success: false,
+      message: e.message
+    });
+  }
 };
 export { postLink, getSlugredirect, getLinks };

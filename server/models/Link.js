@@ -1,6 +1,10 @@
 import { Schema , model } from "mongoose";
 
 const linkSchema = new Schema({
+user : {
+    type : Schema.Types.ObjectId,
+    ref : 'User'
+},
     target : {
       type : String,
       required : true
@@ -17,7 +21,8 @@ const linkSchema = new Schema({
     view : {
         type : Number,
         default : 0
-    }
+    },
+    
 }, {timestamps : true})
 
 const Link = model('Link', linkSchema)

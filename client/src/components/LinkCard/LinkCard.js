@@ -3,8 +3,9 @@ import viewIcon from "./views.png";
 import linkIcon from "./link.png";
 import shortLink from './short-link.png'
 import copyIcon from './copy.png'
-function linkCard({ title, target, slug, createdAt, view }) {
+function LinkCard({ title, target, slug, createdAt, view }) {
   return (
+    
     <div className="link-card-container">
       <h3 className="link-card-heading">{title}</h3>
 
@@ -13,8 +14,8 @@ function linkCard({ title, target, slug, createdAt, view }) {
 
       <a href={target} className="link-card-target" target="_blank">
         <img src={linkIcon} className="link-icon" />
-        {target.substring(0, 50)}
-        {target.length > 50 ? "..." : null}
+        
+        {target.substring(0,50)}{target.length > 50 ? "..." : null}
       </a>
       <br/>
       <a href={slug} className="link-card-target" target="_blank">
@@ -28,4 +29,4 @@ function linkCard({ title, target, slug, createdAt, view }) {
   );
 }
 
-export default linkCard;
+export default LinkCard;

@@ -1,42 +1,51 @@
-
 import LinkCard from "../LinkCard/LinkCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+
 function AllLinks() {
   const [links, setLinks] = useState([]);
+  const [user, setUser] = useState(null);
 
-  const allLinks = async () => {
+  const fetchLinks = async (userId) => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/links`
+        `${process.env.REACT_APP_API_URL}/links?userId=${userId}`
       );
+      console.log(response.data.data)
       setLinks(response.data.data);
     } catch (error) {
       toast.error("Failed to fetch links");
     }
   };
+
   useEffect(() => {
-    allLinks();
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+      setUser(currentUser);
+      fetchLinks(currentUser._id);
+    } else {
+      window.location.href = "/login";
+    }
   }, []);
 
   return (
-    <div className="link-container">
-      <h1 className="link-heading">My Links</h1>
-      {links.map((link, i) => {
-        const { title, target, slug, view, createdAt } = link;
+    <div>
+      <h1>My Links</h1>
+      {links?.map((link, i) => {
+        const { title, target, view, slug, createdAt } = link;
         return (
           <LinkCard
             key={i}
             title={title}
             target={target}
-            slug={slug}
             view={view}
+            slug={slug}
             createdAt={createdAt}
           />
         );
       })}
-      <Toaster />
+      <Toaster/>
     </div>
   );
 }
