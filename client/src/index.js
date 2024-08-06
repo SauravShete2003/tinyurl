@@ -6,7 +6,8 @@ import Home from "./views/Home/Home";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
 import AllLinks from "./components/AllLinks/AllLinks";
-
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -30,5 +31,13 @@ const router = createBrowserRouter([
     path: "/alllinks",
     element: <AllLinks />,
   },
+  {
+    path : '/navbar',
+    element : <Navbar/>
+  },
+  {
+    path : '/footer',
+    element : <Footer/>
+  }
 ]);
 root.render(<RouterProvider router={router} />);

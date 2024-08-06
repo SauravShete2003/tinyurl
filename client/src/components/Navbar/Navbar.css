@@ -1,0 +1,21 @@
+.navbar-container{
+    background-color: #ff8e3c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-item{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: black;
+}
+.navbar-item:hover{
+color: white;   
+}
+
+.navbar-heading{
+    margin-right: 60px;
+}
