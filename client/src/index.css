@@ -5,7 +5,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.auth-container{
+.auth-container {
   text-align: center;
   box-shadow: 0 0 5px 2px gray;
   border-radius: 5px;
@@ -13,24 +13,24 @@ body {
   width: 500px;
   height: 350px;
   display: block;
-  margin:  40px auto;
+  margin: 40px auto;
   padding: 10px;
- 
 }
-.input-box{
+
+.input-box {
   border-radius: 5px;
   border: 2px solid black;
   font-size: 17px;
   width: 80%;
-  padding:7px 10px;
+  padding: 7px 10px;
   margin: 10px;
 }
 
-.input-box:focus , .input-box:active{
+.input-box:focus, .input-box:active {
   outline: none;
 }
 
-.auth-btn{
+.auth-btn {
   cursor: pointer;
   margin-top: 10px;
   font-weight: 600;
@@ -41,14 +41,50 @@ body {
   border: none;
 }
 
-.auth-heading{
+.auth-heading {
   color: #ff8e3c;
 }
 
-.auth-link{
+.auth-link {
   margin-top: 10px;
   display: block;
   color: blue;
   text-decoration: none;
+}
 
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .auth-container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .input-box {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .auth-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .input-box {
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .auth-btn {
+    font-size: 15px;
+    padding: 10px 15px;
+  }
 }

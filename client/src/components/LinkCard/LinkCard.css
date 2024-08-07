@@ -1,3 +1,4 @@
+
 .link-container {
   background-color: white;
   margin: 10px;
@@ -7,6 +8,7 @@
   overflow-y: scroll;
 }
 
+
 .link-card-container {
   position: relative;
   box-shadow: 0 0 4px 3px rgb(195, 193, 193);
@@ -14,15 +16,17 @@
   margin: 20px 5px;
   border-radius: 4px;
 }
+
 .link-card-heading {
   margin: 3px;
   margin-bottom: 10px;
-
 }
 
-.link-card-target{
-    margin-left: 30px;
+
+.link-card-target {
+  margin-left: 30px;
   text-decoration: none;
+  color: inherit;
 }
 
 .url-name {
@@ -36,6 +40,7 @@
   font-size: 18px;
 }
 
+
 .view-icon {
   width: 20px;
   position: absolute;
@@ -43,23 +48,75 @@
   right: 10px;
 }
 
-.link-icon{
-    width: 20px;
-    position: absolute;
-    left: 10px;
+
+.link-icon {
+  width: 20px;
+  position: absolute;
+  left: 10px;
 }
 
-.create-link-time{
-    font-size: 12px;
-    position: absolute;
-    right:10px;
-    bottom: 10px;
+.create-link-time {
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
-.copy-icon{
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+.copy-icon {
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .link-card-container {
+    padding: 10px;
+    margin: 15px 5px;
+  }
+
+  .link-card-heading {
+    font-size: 16px;
+  }
+
+  .link-card-view {
+    position: static;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .view-icon {
+    position: static;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .link-card-target {
+    margin-left: 0;
+    display: block;
+    word-break: break-word;
+  }
+
+  .link-icon {
+    position: static;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .create-link-time {
+    position: static;
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .copy-icon {
+    position: static;
+    display: inline-block;
+    margin-top: 10px;
+  }
 }

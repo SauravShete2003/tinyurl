@@ -1,41 +1,81 @@
-.footer-container{
+/* General styles for the footer container */
+.footer-container {
     position: relative;
     font-weight: 600;
     background-color: #ff8e3c;
     height: 130px;
     display: flex;
     justify-content: space-around;
-    align-items: center;    
-}
-
-.footer-icon{
+    align-items: center;
+  }
+  
+  /* Footer icon styles */
+  .footer-icon {
     width: 40px;
     position: absolute;
     top: 45px;
     left: 30px;
-}
-
-.persoanl-details{
+  }
+  
+  /* Personal details styles */
+  .persoanl-details {
     text-decoration: none;
     color: black;
-}
-.persoanl-details:hover{
+  }
+  
+  .persoanl-details:hover {
     color: white;
-}
-
-.policy-item{
+  }
+  
+  /* Policy item styles */
+  .policy-item {
     display: block;
     text-decoration: none;
     margin: 5px 0;
     font-size: 18px;
     font-weight: 600;
     color: black;
-}
-.policy-item:hover{
+  }
+  
+  .policy-item:hover {
     color: white;
-}
-
-.footer-heading{
+  }
+  
+  /* Footer heading styles */
+  .footer-heading {
     font-size: 30px;
     margin-right: 10%;
-}
+  }
+  
+  /* Media queries for mobile devices */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .footer-icon {
+      position: static;
+      margin-bottom: 10px;
+    }
+  
+    .footer-heading {
+      font-size: 24px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .persoanl-details {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .policy-item {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  }
+  
