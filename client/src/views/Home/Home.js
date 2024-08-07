@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -8,12 +8,11 @@ function Home() {
     title: "",
     target: "",
     slug: "",
+    user : null
   });
 
   const shortenURL = async () => {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/Link`, {
-      ...linkData,
-    });
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/Link`, linkData);
     if (response.data.success) {
       toast.success("Link shortened successfully");
 
@@ -21,12 +20,22 @@ function Home() {
         title: "",
         target: "",
         slug: "",
+        user: null
       });
+      setTimeout(()=>{
+        window.location.href ='/alllinks'
+      } , 2000)
     } else {
       toast.error(response.data.message);
     }
   };
 
+  useEffect(()=>{
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if(currentUser){
+      setLinkData({...linkData, user:currentUser._id})
+    }
+  }, [])
   return (
     <div>
       <p className="link-heading">

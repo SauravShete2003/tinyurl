@@ -5,13 +5,11 @@ import toast, { Toaster } from "react-hot-toast";
 
 function AllLinks() {
   const [links, setLinks] = useState([]);
-  const [user, setUser] = useState(null);
 
   const fetchLinks = async (userId) => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/links?userId=${userId}`
-      );
+      `${process.env.REACT_APP_API_URL}/links?userId=${userId}`);
       console.log(response.data.data)
       setLinks(response.data.data);
     } catch (error) {
@@ -22,7 +20,6 @@ function AllLinks() {
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (currentUser) {
-      setUser(currentUser);
       fetchLinks(currentUser._id);
     } else {
       window.location.href = "/login";

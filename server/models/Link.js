@@ -3,7 +3,8 @@ import { Schema , model } from "mongoose";
 const linkSchema = new Schema({
 user : {
     type : Schema.Types.ObjectId,
-    ref : 'User'
+    ref : 'User',
+    require : true
 },
     target : {
       type : String,

@@ -1,8 +1,16 @@
 .footer-container{
     background-color: #ff8e3c;
-    padding: 10px;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
 }
 
 .footer-icon{
     width: 40px;
+}
+
+.persoanl-details{
+    text-decoration: none;
+    color: black;
 }

@@ -1,14 +1,12 @@
 import User from "./../models/User.js";
-import bcrypt from "bcrypt";
 
 const postSignup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({
       name,
       email,
-      password: hashedPassword,
+      password
     });
     const savedUser = await user.save();
     res.json({
@@ -29,17 +27,10 @@ const postLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
+    
     if (!user) {
       res.json({
         message: "User not found",
-        data: null,
-        success: false,
-      });
-    }
-    const isValidPassword = await bcrypt.compare(password, user.password);
-    if (!isValidPassword) {
-      res.json({
-        message: "Invalid password",
         data: null,
         success: false,
       });
@@ -57,21 +48,6 @@ const postLogin = async (req, res) => {
     });
   }
 };
-const getByEmail = async (req, res) => {
-  const { email } = req.body;
-  const userEmail = await User.findById(email);
-  if (!userEmail) {
-    res.json({
-      message: "User not found",
-      data: null,
-      success: false,
-    });
-  }
-  res.json({
-    success: true,
-    data: userEmail,
-    message: "User featch succesfully",
-  });
-};
 
-export { postLogin, postSignup , getByEmail};
+
+export { postLogin, postSignup };
