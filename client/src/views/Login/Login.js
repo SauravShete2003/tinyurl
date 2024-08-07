@@ -26,6 +26,7 @@ function Login() {
       });
       toast.success(response.data.message);
       localStorage.setItem("currentUser", JSON.stringify(response.data.data));
+      toast.success('Login User Successfully')
       setTimeout(() => {
         window.location.href = "/";
       }, 2000);

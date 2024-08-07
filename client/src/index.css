@@ -31,6 +31,7 @@ body {
 }
 
 .auth-btn{
+  cursor: pointer;
   margin-top: 10px;
   font-weight: 600;
   font-size: 17px;
