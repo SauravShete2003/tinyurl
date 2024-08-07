@@ -1,11 +1,9 @@
-body{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 .tiny-url-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .link-form {

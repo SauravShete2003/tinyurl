@@ -1,4 +1,6 @@
 .footer-container{
+    position: relative;
+    font-weight: 600;
     background-color: #ff8e3c;
     height: 130px;
     display: flex;
@@ -8,9 +10,32 @@
 
 .footer-icon{
     width: 40px;
+    position: absolute;
+    top: 45px;
+    left: 30px;
 }
 
 .persoanl-details{
     text-decoration: none;
     color: black;
+}
+.persoanl-details:hover{
+    color: white;
+}
+
+.policy-item{
+    display: block;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+.policy-item:hover{
+    color: white;
+}
+
+.footer-heading{
+    font-size: 30px;
+    margin-right: 10%;
 }

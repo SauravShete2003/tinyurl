@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 function Home() {
   const [linkData, setLinkData] = useState({
     title: "",
@@ -37,7 +38,9 @@ function Home() {
     }
   }, [])
   return (
+
     <div>
+      <Navbar/>
       <p className="link-heading">
         Streamline Your URLs with Our Easy-to-Use Link Shortening Service
       </p>
@@ -75,6 +78,7 @@ function Home() {
         </form>
       </div>
       <Toaster />
+      <Footer/>
     </div>
   );
 }

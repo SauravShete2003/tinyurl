@@ -8,6 +8,9 @@ import Login from "./components/Login/Login";
 import AllLinks from "./components/AllLinks/AllLinks";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import PrivacyPolicy from "./views/PrivacyPolicy/PrivacyPolicy";
+import TermsCondition from "./views/TermsCondition/TermsCondition";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -38,6 +41,14 @@ const router = createBrowserRouter([
   {
     path : '/footer',
     element : <Footer/>
+  },
+  {
+    path: '/privacypolicy',
+    element: <PrivacyPolicy />,
+  },
+  {
+    path : 'termscondition',
+    element:<TermsCondition/>
   }
 ]);
 root.render(<RouterProvider router={router} />);

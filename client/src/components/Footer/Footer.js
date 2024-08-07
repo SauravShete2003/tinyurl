@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="footer-container">
       <img src={linkIcon} className="footer-icon" />
-      <span>Tiny URL</span>
+      <span className="footer-heading">Tiny URL</span>
       <div>
         <p>
           Phone :
@@ -21,11 +21,12 @@ function Footer() {
             {email}
           </a>
         </p>
+        <span>© 2023 Tiny URL. All rights reserved.</span>
       </div>
-      <div>
-        <span>Privacy Policy</span>
-        <span>Terms and Condition</span>
-        <span>Contact</span>
+      <div className="">
+       <Link to={'/privacypolicy'} className="policy-item">PrivacyPolicy</Link>
+       <Link to={'/termscondition'} className="policy-item">Terms&Condition</Link> 
+       <Link to={'/contact'} className="policy-item">Contact</Link>
       </div>
     </div>
   );
