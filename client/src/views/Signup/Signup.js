@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import './Signup.css'
 import axios from 'axios'
 import toast , {Toaster} from "react-hot-toast"
 import {Link} from 'react-router-dom'
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 function Signup() {
   const [signup, setSignup] = useState({
     name: "",
@@ -33,6 +34,8 @@ function Signup() {
     
   }
   return (
+    <>
+    <Navbar/>
     <div className="auth-container">
       <h1 className="auth-heading">Signup</h1>
       <form className="auth-from">
@@ -67,6 +70,8 @@ function Signup() {
       </form>
       <Toaster/>
     </div>
+    <Footer/>
+    </>
   );
 }
 

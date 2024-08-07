@@ -5,6 +5,18 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.auth-container{
+  text-align: center;
+  box-shadow: 0 0 5px 2px gray;
+  border-radius: 5px;
+  background-color: #fffffe;
+  width: 500px;
+  height: 350px;
+  display: block;
+  margin:  40px auto;
+  padding: 10px;
+ 
+}
 .input-box{
   border-radius: 5px;
   border: 2px solid black;

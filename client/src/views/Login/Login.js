@@ -2,6 +2,8 @@ import toast , {Toaster} from "react-hot-toast";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 function Login() {
   const [user, setUser] = useState({
@@ -34,6 +36,8 @@ function Login() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="auth-container">
       <div className="form-container">
         <h1 className="auth-heading">Login</h1>
@@ -69,6 +73,8 @@ function Login() {
       </div>
       <Toaster />
     </div>
+    <Footer/>
+    </>
   )
 }
 

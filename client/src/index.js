@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./views/Home/Home";
-import Signup from "./components/Signup/Signup";
-import Login from "./components/Login/Login";
-import AllLinks from "./components/AllLinks/AllLinks";
+import Signup from "./views/Signup/Signup";
+import Login from "./views/Login/Login";
+import MyLinks from "../src/views/MyLinks/MyLinks";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./views/PrivacyPolicy/PrivacyPolicy";
@@ -32,23 +32,23 @@ const router = createBrowserRouter([
   },
   {
     path: "/alllinks",
-    element: <AllLinks />,
+    element: <MyLinks />,
   },
   {
-    path : '/navbar',
-    element : <Navbar/>
+    path: "/navbar",
+    element: <Navbar />,
   },
   {
-    path : '/footer',
-    element : <Footer/>
+    path: "/footer",
+    element: <Footer />,
   },
   {
-    path: '/privacypolicy',
+    path: "/privacypolicy",
     element: <PrivacyPolicy />,
   },
   {
-    path : 'termscondition',
-    element:<TermsCondition/>
-  }
+    path: "termscondition",
+    element: <TermsCondition />,
+  },
 ]);
 root.render(<RouterProvider router={router} />);

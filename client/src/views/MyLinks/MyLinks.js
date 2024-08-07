@@ -1,9 +1,10 @@
-import LinkCard from "../LinkCard/LinkCard";
+import LinkCard from '../../components/LinkCard/LinkCard'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import Navbar from '../../components/Navbar/Navbar';
 
-function AllLinks() {
+function MyLinks() {
   const [links, setLinks] = useState([]);
 
   const fetchLinks = async (userId) => {
@@ -28,7 +29,8 @@ function AllLinks() {
 
   return (
     <div>
-      <h1>My Links</h1>
+      <Navbar/>
+      <h1 className='auth-heading' style={{textAlign:'center'}}>My Links</h1>
       {links?.map((link, i) => {
         const { title, target, view, slug, createdAt } = link;
         return (
@@ -47,4 +49,4 @@ function AllLinks() {
   );
 }
 
-export default AllLinks;
+export default MyLinks;
