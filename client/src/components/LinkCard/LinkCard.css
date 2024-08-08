@@ -24,6 +24,7 @@
 
 
 .link-card-target {
+  font-weight: bold;
   margin-left: 30px;
   text-decoration: none;
   color: inherit;
@@ -79,31 +80,33 @@
 
   .link-card-heading {
     font-size: 16px;
+    text-align: center;
   }
 
   .link-card-view {
-    position: static;
-    display: block;
-    text-align: right;
+    position: absolute;
+    top: 5px;
+    left: 50px; 
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .view-icon {
-    position: static;
-    display: inline-block;
+    position: absolute;
+    top: 7px;
+   left: 10px;
     margin-left: 5px;
   }
 
   .link-card-target {
-    margin-left: 0;
+    margin-left: 25px;
     display: block;
     word-break: break-word;
   }
 
   .link-icon {
-    position: static;
-    display: inline-block;
+    position: fixed;
+
     margin-right: 5px;
   }
 
@@ -115,8 +118,9 @@
   }
 
   .copy-icon {
-    position: static;
-    display: inline-block;
-    margin-top: 10px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+  
   }
 }

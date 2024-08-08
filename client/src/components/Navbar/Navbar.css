@@ -14,12 +14,12 @@
 .menu-icon {
   width: 30px;
   cursor: pointer;
-  display: none; /* Initially hidden, will be shown on smaller screens */
+  display: none;
 }
 
 .nav-item-container {
   display: flex;
-  gap: 15px;
+  gap: 45px;
 }
 
 .nav-item {
@@ -41,12 +41,10 @@
   cursor: pointer;
   font-weight: bold;
 }
-
-.logout-btn:hover {
-  color: darkred;
+.logged-user {
+  font-weight: bold;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;

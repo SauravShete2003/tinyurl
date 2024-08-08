@@ -4,6 +4,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import MenuIcon from "./menu.png";
 
+
 function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
   const [user, setUser] = useState({});
@@ -29,20 +30,18 @@ function Navbar() {
 
   return (
     <div className="navbar-container">
-      <h1 className="navbar-heading">Tiny URL</h1>
+      
+      <h1 className="navbar-heading">🔗 Tiny URL</h1>
       <img src={MenuIcon} className="menu-icon" onClick={toggleMenu} alt="Menu" />
       <div className={`nav-item-container ${isMenu ? "active" : ""}`}>
         <Link to="/" className="nav-item" onClick={toggleMenu}>
           Home
         </Link>
-        <Link to="/" className="nav-item" onClick={toggleMenu}>
-          Generate
-        </Link>
         <Link to="/alllinks" className="nav-item" onClick={toggleMenu}>
           My Links
         </Link>
         <Link to="/login" className="nav-item" onClick={toggleMenu}>
-          LogIn
+          Login
         </Link>
         {user.name && <span className="nav-item logged-user">{user.name}</span>}
         {user.name && (

@@ -30,7 +30,7 @@ function MyLinks() {
   return (
     <div>
       <Navbar/>
-      <h1 className='auth-heading' style={{textAlign:'center'}}>My Links</h1>
+      <h1 className='auth-heading' style={{textAlign:'center'}}>My Links🔗</h1>
       {links?.map((link, i) => {
         const { title, target, view, slug, createdAt } = link;
         return (
