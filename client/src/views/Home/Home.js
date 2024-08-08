@@ -36,6 +36,11 @@ function Home() {
     if(currentUser){
       setLinkData({...linkData, user:currentUser._id})
     }
+    else{
+     setTimeout(()=>{
+       window.location.href ='/login'
+     },2000)
+    }
   }, [])
   return (
 

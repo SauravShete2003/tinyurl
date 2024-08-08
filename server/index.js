@@ -30,7 +30,6 @@ app.get("/health", (req, res) => {
 
 app.post("/Link", postLink);
 app.get('/links' , getLinks);
-// app.get('/user' , getByEmail)
 app.get("/:slug", getSlugredirect);
 app.post("/login", postLogin);
 app.post("/signup", postSignup);
