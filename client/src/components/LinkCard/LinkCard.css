@@ -1,59 +1,91 @@
 
 .link-container {
-  background-color: white;
-  margin: 10px;
-  padding: 5px;
-  box-shadow: 0 0 5px 2px gray;
+  background-color: #f8f9fa; /* Softer background color */
+  margin: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
   max-height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto; /* Smooth scrolling */
+  border-radius: 8px; /* Rounded corners */
 }
-
 
 .link-card-container {
   position: relative;
-  box-shadow: 0 0 4px 3px rgb(195, 193, 193);
-  padding: 15px;
-  margin: 20px 5px;
-  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 20px;
+  margin: 15px 10px;
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+  background-color: #ffffff;
+}
+
+.link-card-container:hover {
+  transform: translateY(-3px); /* Lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
 .link-card-heading {
-  margin: 3px;
-  margin-bottom: 10px;
+  margin: 5px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600; /* Bold heading */
+  color: #333; /* Darker text color */
 }
-
 
 .link-card-target {
   font-weight: bold;
   margin-left: 30px;
   text-decoration: none;
-  color: inherit;
+  color: #007bff; /* Primary link color */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.link-card-target:hover {
+  color: #0056b3; /* Darker shade on hover */
 }
 
 .url-name {
   font-weight: bold;
+  font-size: 15px;
+  color: #555; /* Slightly muted color */
 }
 
 .link-card-view {
   position: absolute;
-  right: 40px;
+  right: 50px;
   top: 40%;
-  font-size: 18px;
+  font-size: 16px;
+  color: #555; /* Muted color */
 }
-
-
-.view-icon {
-  width: 20px;
-  position: absolute;
-  top: 40%;
-  right: 10px;
-}
-
-
-.link-icon {
-  width: 20px;
+.short-icon{
   position: absolute;
   left: 10px;
+  bottom: 15px;
+  width:23px;
+  font-size: 16px;
+  color: #555;
+}
+
+.view-icon {
+  width: 22px;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  transform: translateY(-50%); /* Center icon vertically */
+  cursor: pointer;
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.view-icon:hover {
+  transform: translateY(-50%) scale(1.1); /* Scale up on hover */
+}
+
+.link-icon {
+  width: 22px;
+  position: absolute;
+  left: 10px;
+  top: 51%;
+  transform: translateY(-50%); /* Center icon vertically */
 }
 
 .create-link-time {
@@ -61,6 +93,7 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
+  color: #777; /* Subtle text color */
 }
 
 .copy-icon {
@@ -69,7 +102,14 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s; /* Smooth hover effect */
 }
+
+.copy-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  opacity: 0.8; /* Slight fade on hover */
+}
+
 
 
 @media (max-width: 600px) {

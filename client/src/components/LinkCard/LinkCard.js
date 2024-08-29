@@ -22,7 +22,7 @@ function LinkCard({ title, target, slug, createdAt, view }) {
         href={shortUrl}
         className="link-card-target"
         target="_blank">
-        <img src={shortLink} className="link-icon" alt="link-icon-slug" />
+        <img src={shortLink} className="short-icon" alt="link-icon-slug" />
         {shortUrl}
       </a>
       <br />

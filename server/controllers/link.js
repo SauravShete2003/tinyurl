@@ -19,7 +19,6 @@ const postLink = async (req, res) => {
 const getSlugredirect = async (req, res) => {
   const { slug } = req.params;
   const link = await Link.findOne({ slug });
-  console.log(link);
   if (!link) {
     res.status(404).json({
       success: false,
