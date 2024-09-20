@@ -1,81 +1,95 @@
-/* General styles for the footer container */
 .footer-container {
-    position: relative;
-    font-weight: 600;
-    background-color: #ff8e3c;
-    height: 130px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #ff8e3c, #ff5722);
+  height: 160px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.footer-container:hover {
+  background-color: #ff7a1c;
+}
+
+.footer-icon {
+  width: 50px;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+}
+
+.personal-details {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.personal-details:hover {
+  color: #ffd6a5;
+}
+
+.policy-item {
+  display: block;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.policy-item:hover {
+  color: #ffd6a5;
+}
+
+.footer-heading {
+  font-size: 28px;
+  color: white;
+  margin-right: 2%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.footer-heading:hover {
+  color: #ffd6a5;
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    flex-direction: column;
+    height: auto;
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: none;
   }
-  
-  /* Footer icon styles */
+
   .footer-icon {
+    position: static;
+    margin-bottom: 15px;
     width: 40px;
-    position: absolute;
-    top: 45px;
-    left: 30px;
   }
-  
-  /* Personal details styles */
-  .persoanl-details {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .persoanl-details:hover {
-    color: white;
-  }
-  
-  /* Policy item styles */
-  .policy-item {
-    display: block;
-    text-decoration: none;
-    margin: 5px 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: black;
-  }
-  
-  .policy-item:hover {
-    color: white;
-  }
-  
-  /* Footer heading styles */
+
   .footer-heading {
-    font-size: 30px;
-    margin-right: 10%;
+    font-size: 24px;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  
-  /* Media queries for mobile devices */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
-      justify-content: center;
-      text-align: center;
-    }
-  
-    .footer-icon {
-      position: static;
-      margin-bottom: 10px;
-    }
-  
-    .footer-heading {
-      font-size: 24px;
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  
-    .persoanl-details {
-      display: block;
-      margin-bottom: 10px;
-    }
-  
-    .policy-item {
-      font-size: 16px;
-      margin: 5px 0;
-    }
+
+  .personal-details {
+    display: block;
+    margin-bottom: 10px;
   }
-  
+
+  .policy-item {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}

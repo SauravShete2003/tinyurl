@@ -1,50 +1,8 @@
-
 .tiny-url-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
-}
-
-.link-form {
-  background-color: #fffffe;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  width: 400px;
-  height: 300px;
-  padding: 20px;
-  box-shadow: 0 0 5px 3px gray;
-}
-
-.link-input {
-  border: 2px solid #f8b17e;
-  border-radius: 4px;
-  font-size: 17px;
-  width: 80%;
-  height: 20px;
-  padding: 10px;
-  display: block;
-  margin: 15px auto;
-}
-.link-input:active,
-.link-input:focus {
-  outline: none;
-}
-.link-btn {
-  background-color: #0d0d0d;
-  border-radius: 5px;
-  border: none;
-  background-color: #ff8e3c;
-  font-weight: 800;
-  width: 87%;
-  height: 30px;
-  display: block;
-  margin: 5px auto;
-  cursor: pointer;
-}
-.link-btn:hover {
-  background-color: #ff9f4d;
 }
 
 .link-heading {
@@ -54,7 +12,9 @@
   font-weight: 700;
 }
 
-.from-link-heading {
-  color: #f38b30;
-}
+.user-name{
+  font-size: 23px;
+  text-align: center;
+  margin: 5px;
 
+}

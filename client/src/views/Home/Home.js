@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import Navbar from '../../components/Navbar/Navbar'
-import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+
 function Home() {
+  const [user, setUser] = useState({});
   const [linkData, setLinkData] = useState({
     title: "",
     target: "",
     slug: "",
-    user : null
+    user: null
   });
 
   const shortenURL = async () => {
@@ -23,37 +25,39 @@ function Home() {
         slug: "",
         user: null
       });
-      setTimeout(()=>{
-        window.location.href ='/alllinks'
-      } , 2000)
+      setTimeout(() => {
+        window.location.href = '/alllinks';
+      }, 2000);
     } else {
       toast.error(response.data.message);
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if(currentUser){
-      setLinkData({...linkData, user:currentUser._id})
+    if (currentUser) {
+      setUser(currentUser); 
+      setLinkData({ ...linkData, user: currentUser._id });
+    } else {
+      setTimeout(() => {
+        window.location.href = '/login';
+      }, 1000);
     }
-    else{
-     setTimeout(()=>{
-       window.location.href ='/login'
-     },1000)
-    }
-  }, [])
-  return (
+  }, []);
 
+  return (
     <div>
-      <Navbar/>
+      <Navbar />
       <p className="link-heading">
         Streamline Your URLs with Our Easy-to-Use Link Shortening Service
       </p>
+     
+      <h2 className="user-name"> <i>Welcome {user.name ? `To ${user.name}` : "to our platform"}</i></h2> 
       <div className="tiny-url-container">
-        <form className="link-form">
+        <form className="auth-container">
           <h2 className="form-link-heading">Generate Shorten URL</h2>
           <input
-            className="link-input"
+            className="input-box"
             type="text"
             placeholder="Title"
             onChange={(e) =>
@@ -62,7 +66,7 @@ function Home() {
             value={linkData.title}
           />
           <input
-            className="link-input"
+            className="input-box"
             type="text"
             placeholder="Target"
             value={linkData.target}
@@ -71,19 +75,19 @@ function Home() {
             }
           />
           <input
-            className="link-input"
+            className="input-box"
             type="text"
             placeholder="Slug"
             value={linkData.slug}
             onChange={(e) => setLinkData({ ...linkData, slug: e.target.value })}
           />
-          <button type="button" className="link-btn" onClick={shortenURL}>
+          <button type="button" className="auth-btn" onClick={shortenURL}>
             Generate
           </button>
         </form>
       </div>
       <Toaster />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
