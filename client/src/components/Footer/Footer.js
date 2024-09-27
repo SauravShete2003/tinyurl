@@ -8,7 +8,7 @@ function Footer() {
     <div className="footer-container">
     <div className="footer-title-container">
       <div>
-      <img src={linkIcon} className="footer-icon" />
+      <img src={linkIcon} className="footer-icon"  alt=""/>
       <span className="footer-heading">Tiny URL</span>
       </div>
       <div>

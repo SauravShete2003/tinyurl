@@ -1,53 +1,54 @@
-
 .link-container {
-  background-color: #f8f9fa; 
+  background-color: #f0f4f8; /* Matches the body background */
   margin: 15px;
   padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-height: 500px;
-  overflow-y: auto; 
-  border-radius: 8px; 
+  overflow-y: auto;
+  border-radius: 10px; /* More rounded corners */
 }
 
 .link-card-container {
   position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 15px 10px;
-  border-radius: 8px; 
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px; /* Matches the rounded elements in your project */
+  transition: transform 0.3s, box-shadow 0.3s;
   background-color: #ffffff;
+  border: 1px solid #ddd;
 }
 
 .link-card-container:hover {
-  transform: translateY(-3px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .link-card-heading {
   margin: 5px;
   margin-bottom: 12px;
   font-size: 18px;
-  font-weight: 600; 
-  color: #333; 
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
 }
 
 .link-card-target {
   font-weight: bold;
   margin-left: 30px;
   text-decoration: none;
-  color: #007bff; 
-  transition: color 0.3s; 
+  color: #2ebf91; /* Matches the primary color from your gradient */
+  transition: color 0.3s;
 }
 
 .link-card-target:hover {
-  color: #0056b3; 
+  color: #8360c3; /* Gradient accent */
 }
 
 .url-name {
   font-weight: bold;
   font-size: 15px;
-  color: #555; 
+  color: #555;
 }
 
 .link-card-view {
@@ -55,13 +56,14 @@
   right: 50px;
   top: 40%;
   font-size: 16px;
-  color: #555; 
+  color: #555;
 }
-.short-icon{
+
+.short-icon {
   position: absolute;
   left: 10px;
   bottom: 15px;
-  width:23px;
+  width: 23px;
   font-size: 16px;
   color: #555;
 }
@@ -71,13 +73,14 @@
   position: absolute;
   top: 45%;
   right: 10px;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   cursor: pointer;
-  transition: transform 0.2s; 
+  transition: transform 0.2s, color 0.2s;
 }
 
 .view-icon:hover {
-  transform: translateY(-50%) scale(1.1); 
+  transform: translateY(-50%) scale(1.1);
+  color: #2ebf91;
 }
 
 .link-icon {
@@ -85,7 +88,7 @@
   position: absolute;
   left: 10px;
   top: 51%;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
 }
 
 .create-link-time {
@@ -93,7 +96,7 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: #777; 
+  color: #777;
 }
 
 .copy-icon {
@@ -106,11 +109,9 @@
 }
 
 .copy-icon:hover {
-  transform: scale(1.1); 
-  opacity: 0.8; 
+  transform: scale(1.1);
+  opacity: 0.8;
 }
-
-
 
 @media (max-width: 600px) {
   .link-card-container {
@@ -126,13 +127,13 @@
   .link-card-view {
     top: 5px;
     left: 50px;
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   .view-icon {
     position: absolute;
     top: 15px;
-   left: 10px;
+    left: 10px;
     margin-left: 5px;
   }
 
@@ -147,10 +148,9 @@
     position: absolute;
     left: 15px;
     top: 35%;
-
   }
 
-  .create-link-time { 
+  .create-link-time {
     font-size: 16px;
   }
 
@@ -158,9 +158,9 @@
     position: absolute;
     top: 4px;
     right: 10px;
-  
   }
-  .short-icon{
+
+  .short-icon {
     left: 15px;
     bottom: 16%;
   }
