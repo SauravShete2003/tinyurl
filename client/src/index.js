@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./views/Home/Home";
 import Signup from "./views/Signup/Signup";
 import Login from "./views/Login/Login";
+import GenerateLink from "./views/GenerateLink/GenerateLink";
 import MyLinks from "../src/views/MyLinks/MyLinks";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -50,5 +51,9 @@ const router = createBrowserRouter([
     path: "termscondition",
     element: <TermsCondition />,
   },
+  {
+    path : '/generate',
+    element : <GenerateLink />
+  }
 ]);
 root.render(<RouterProvider router={router} />);

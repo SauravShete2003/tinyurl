@@ -40,6 +40,9 @@ function Navbar() {
         <Link to="/" className="nav-item" onClick={toggleMenu}>
           Home
         </Link>
+        <Link to="/generate" className="nav-item" onClick={toggleMenu}>
+          Generate
+        </Link>
         <Link to="/alllinks" className="nav-item" onClick={toggleMenu}>
           My Links
         </Link>
