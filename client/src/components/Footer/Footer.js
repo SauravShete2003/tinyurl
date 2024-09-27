@@ -6,28 +6,23 @@ function Footer() {
   const email = "sauravshete72@gmail.com";
   return (
     <div className="footer-container">
+    <div className="footer-title-container">
+      <div>
       <img src={linkIcon} className="footer-icon" />
       <span className="footer-heading">Tiny URL</span>
-      <div>
-        <p>
-          Phone :
-          <a href={`tel: ${phoneNumber}`} className="persoanl-details">
-            {phoneNumber}
-          </a>
-        </p>
-        <p>
-          Email :
-          <a href={`mailto: ${email}`} className="persoanl-details">
-            {email}
-          </a>
-        </p>
       </div>
-      <div className="">
+      <div>
+        <p>Phone :<a href={`tel: ${phoneNumber}`} className="persoanl-details">{phoneNumber}</a> </p>
+
+        <p>Email :<a href={`mailto: ${email}`} className="persoanl-details"> {email}</a></p>
+      </div>
+      <div className="privacy-container">
        <Link to={'/privacypolicy'} className="policy-item">PrivacyPolicy</Link>
        <Link to={'/termscondition'} className="policy-item">Terms&Condition</Link> 
        <Link to={'/contact'} className="policy-item">Contact</Link>
       </div>
-      <span style={{textAlign : "center" , color :"black"}}>© 2023 Tiny URL. All rights reserved.</span>
+    </div>
+    <span className="copy">© 2023 Tiny URL. All rights reserved.</span>
     </div>
   );
 }

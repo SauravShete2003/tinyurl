@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f0f4f8;
+  background: linear-gradient(135deg, #f0f4f8, #d6eaff); 
+  color: #333; 
 }
 
 .auth-container {
@@ -17,6 +18,7 @@ body {
   padding: 20px;
   transition: all 0.3s ease-in-out;
 }
+
 
 .input-box {
   border-radius: 8px;

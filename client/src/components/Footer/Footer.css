@@ -1,9 +1,6 @@
 .footer-container {
-  background: linear-gradient(to right, #2ebf91, #8360c3);  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
+  background: linear-gradient(to right, #2ebf91, #8360c3); 
+  padding: 5px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   color: white;
@@ -12,6 +9,12 @@
 
 .footer-container:hover {
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-title-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer-heading {
@@ -37,42 +40,31 @@
   font-weight: 600;
   transition: color 0.3s ease;
 }
-/* 
-.footer-links a:hover {
-  color: #ffd6a5; 
-} */
-
-.footer-socials {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-socials a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  color: #2ebf91;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 .footer-icon {
   position: absolute;
-  top: 62px;
-  left: 10px;
-  width: 50px;
+  top: 31%;
+  left: 7%;
+  width: 45px;
 }
 
-.footer-bottom {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+.privacy-container{
+   padding: 10px;
+   margin: 5px;
+   height: 100px;
+
+}
+.policy-item{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  margin: 10px auto;
+}
+
+.copy{
   text-align: center;
-  font-size: 14px;
-  color: #ddd;
+  display: block;
+ color: black;
 }
 
 
@@ -92,14 +84,6 @@
     align-items: center;
   }
 
-  .footer-socials {
-   display: block;
-    gap: 15px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
-  }
   .footer-icon {
     top: 18px;
     left: 25%;
