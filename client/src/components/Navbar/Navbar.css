@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, #ff8e3c, #ff5722);
-  padding: 15px 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: background 0.5s ease; /* Smooth transition for hover effect */
+  background: linear-gradient(to right, #2ebf91, #8360c3);
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
 .navbar-container:hover {
-  background: linear-gradient(45deg, #ff5722, #ff8e3c);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 .navbar-heading {
   font-size: 26px;
@@ -21,12 +21,12 @@
   transition: color 0.3s ease;
 }
 
-.navbar-heading:hover {
-  color: #ffd6a5;
-}
+/* .navbar-heading:hover {
+  color: #ffd6a5; /* Soft hover effect for the logo/title */
+ 
 
 .menu-icon {
-  width: 35px;
+  width: 30px;
   cursor: pointer;
   display: none;
 }
@@ -43,6 +43,7 @@
   color: white;
   font-size: 18px;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-item::after {
@@ -51,40 +52,49 @@
   height: 2px;
   background: white;
   position: absolute;
-  bottom: -5px;
+  bottom: -1px;
   left: 0;
   transition: width 0.3s ease;
 }
 
 .nav-item:hover::after {
-  width: 100%;
+  width: 100%; /* Animated underline effect */
 }
 
-.nav-item:hover {
-  color: #ffd6a5;
-}
+/* .nav-item:hover {
+  color: #ffd6a5; /* Same hover color as title for consistency */
+
 
 .logged-user {
   font-weight: bold;
   color: white;
+  font-size: 18px;
 }
 
 .logout-btn {
+  margin-top: -10px;
   cursor: pointer;
   font-weight: bold;
-  padding: 8px 15px;
+  padding: 10px 20px;
   background-color: white;
-  color: #ff8e3c;
-  border-radius: 5px;
+  color: #2ebf91;
+  border-radius: 25px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .logout-btn:hover {
-  background-color: #ff5722;
+  background-color:#2ebf91;
   color: white;
 }
 
-@media (max-width:500px) {
+.logout-btn::after{
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+
+@media (max-width: 500px) {
   .menu-icon {
     display: block;
   }
@@ -95,11 +105,11 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background: rgba(255, 142, 60, 0.95);
+    /* background: rgba(255, 142, 60, 0.95); */
     backdrop-filter: blur(5px);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(-20px);
     opacity: 0;
@@ -114,6 +124,6 @@
   .nav-item {
     margin: 10px 0;
     font-size: 20px;
-    color: black;
+    color: white;
   }
 }

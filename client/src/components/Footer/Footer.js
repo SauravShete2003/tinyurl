@@ -21,13 +21,13 @@ function Footer() {
             {email}
           </a>
         </p>
-        <span>© 2023 Tiny URL. All rights reserved.</span>
       </div>
       <div className="">
        <Link to={'/privacypolicy'} className="policy-item">PrivacyPolicy</Link>
        <Link to={'/termscondition'} className="policy-item">Terms&Condition</Link> 
        <Link to={'/contact'} className="policy-item">Contact</Link>
       </div>
+      <span style={{textAlign : "center" , color :"black"}}>© 2023 Tiny URL. All rights reserved.</span>
     </div>
   );
 }

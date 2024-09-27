@@ -41,7 +41,7 @@ function Login() {
     <Navbar/>
     <div className="auth-container">
       <div className="form-container">
-        <h1 className="auth-heading">Login</h1>
+        <h1 className="auth-heading">Login 🔐</h1>
         <form className="">
            <input
               type="text"

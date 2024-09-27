@@ -37,7 +37,7 @@ function Signup() {
     <>
       <Navbar />
       <div className="auth-container">
-        <h1 className="auth-heading">Signup</h1>
+        <h1 className="auth-heading">Signup ✍️ </h1>
         <form className="auth-from">
           <input
             type="text"
