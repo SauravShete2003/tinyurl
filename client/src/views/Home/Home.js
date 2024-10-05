@@ -1,6 +1,7 @@
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
             Explore a world of creativity, inspiration, and endless possibilities.
             Let us guide you on an amazing journey through the art of modern home design.
           </p>
+          <Link to="/generate" style={{textDecoration : "none"}}>
           <button className="auth-btn">Get Started</button>
+          </Link>
         </div>
       </div>
       <Footer />

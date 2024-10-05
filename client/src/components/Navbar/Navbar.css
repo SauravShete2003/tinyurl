@@ -21,10 +21,6 @@
   transition: color 0.3s ease;
 }
 
-/* .navbar-heading:hover {
-  color: #ffd6a5; /* Soft hover effect for the logo/title */
- 
-
 .menu-icon {
   width: 30px;
   cursor: pointer;
@@ -50,7 +46,7 @@
   content: '';
   width: 0;
   height: 2px;
-  background: white;
+  background: black;
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -58,12 +54,8 @@
 }
 
 .nav-item:hover::after {
-  width: 100%; /* Animated underline effect */
+  width: 100%;
 }
-
-/* .nav-item:hover {
-  color: #ffd6a5; /* Same hover color as title for consistency */
-
 
 .logged-user {
   font-weight: bold;
@@ -100,19 +92,17 @@
   }
 
   .nav-item-container {
+    gap: 40px;
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 20px;
-    /* background: rgba(255, 142, 60, 0.95); */
     backdrop-filter: blur(5px);
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(-20px);
     opacity: 0;
+    z-index: 100;
   }
 
   .nav-item-container.active {
@@ -122,8 +112,19 @@
   }
 
   .nav-item {
-    margin: 10px 0;
-    font-size: 20px;
+    font-size: 16px;
+    margin: 4px 0;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .logout-btn {
+    margin-top: -10px;
+    padding:6px 12px;
+    background-color: white;
+  }
+  .logout-btn:hover {
+    background-color:black;
     color: white;
   }
 }

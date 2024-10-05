@@ -70,29 +70,33 @@
 
 @media (max-width: 500px) {
   .footer-container {
+    padding: 10px;
+  }
+  
+  .footer-title-container{
     display: block;
     text-align: center;
-    padding: 25px 30px;
   }
-
+  
   .footer-heading {
-    font-size: 24px;
-    text-align: center;
-  }
+    font-size: 25px;
 
-  .footer-links {
-    align-items: center;
+    margin-left: 30px;
   }
-
+  
   .footer-icon {
-    top: 18px;
+    position: absolute;
+    top: 2%;
     left: 25%;
-    width: 40px;
+    width: 36px;
+  }
+  
+  .privacy-container{
+    text-align: center;
+  
   }
   .policy-item{
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin: 10px auto;
+    display: block; 
   }
+
 }
