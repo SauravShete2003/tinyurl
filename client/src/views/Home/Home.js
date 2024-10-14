@@ -2,12 +2,16 @@ import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
+import logo from './../../logo.png'
 
 function Home() {
   return (
     <div>
       <Navbar />
       <div className="home">
+        <div className="home-left">
+        <img src={logo} className='website-logo' alt=''/>
+        </div>
         <div className="home__container">
           <h1 className="home__title">Discover the Best with Us!</h1>
           <p className="home__description">

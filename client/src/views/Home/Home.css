@@ -3,15 +3,18 @@
   align-items: center;
   justify-content: center;
   height: 70vh;
+  width: 80%;
+  margin: 10px auto;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 .home__container {
   text-align: center;
   padding: 50px;
-  background: linear-gradient(to right, #8360c3, #2ebf91);
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
 }
 
 .home__title {
@@ -33,24 +36,39 @@
   margin: 0 auto;
   line-height: 1.6;
 }
+.website-logo{
+  width: 400px;
+}
 
 @media screen and (max-width : 500px) {
     .home {
-        margin: 15px;
+        margin: 15px auto;
+        display: block;
+        height: auto;
+        width: 90%;
+
       }
       
       .home__container {
         padding: 30px;
+        display: block;
+        padding: 10px
       }
       
       .home__title {
         font-size: 1.5rem;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
+        margin-top: -10px;
       }
       
       .home__description {
         font-size: 1.2rem;
         margin-bottom: 40px;
         line-height: 1.6;
+      }
+      .website-logo{
+        width: 60%;
+        display: block;
+        margin:  0 auto;
       }
 }
